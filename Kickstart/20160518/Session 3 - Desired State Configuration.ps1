@@ -19,14 +19,14 @@ Eval-Configuration -Folder "C:\HelloWorld"
 
 
 # With DSC
-configuration DSCDemo
+Configuration DSCDemo
 {
     node ("localhost")
     {
 
-        File FriendlyName
+        File HelloWorld
         {
-            Ensure          = "Absent"
+            Ensure          = "Present"
             DestinationPath = "C:\HelloWorld"
             Type            = "Directory"
         }       
